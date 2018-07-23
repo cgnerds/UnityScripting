@@ -266,8 +266,8 @@ GameObject:
   - component: {fileID: 1048528037}
   - component: {fileID: 1048528036}
   - component: {fileID: 1048528035}
-  - component: {fileID: 1048528034}
   - component: {fileID: 1048528033}
+  - component: {fileID: 1048528034}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048528032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b360a571f21504fa30ecfb26da4dac, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fd47120586bcd248ba66a083bbdd877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &1048528034
