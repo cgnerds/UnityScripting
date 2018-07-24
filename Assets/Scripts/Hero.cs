@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Runtime.Serialization;
 
 [Serializable]
 public class Hero
@@ -12,10 +13,11 @@ public class Hero
     public float attack;
     public float defence;
     public string name;
+    [NonSerialized]
+    private float powerRank;
 
     public Hero()
-    {
-
+    { 
     }
 
     public Hero(int id, float maxHp, float attack, float defence)
@@ -25,6 +27,14 @@ public class Hero
         this.currentHp = this.maxHp;
         this.attack = attack;
         this.defence = defence;
+        this.powerRank = 0.5f * maxHp + 0.2f * attack + 0.3f * defence;
+    }
+
+    [OnDeserialized]
+    public void CalculateRightPowerRank(StreamingContext context)
+    {
+        Debug.Log("call CalculateRightPowerRank");
+        this.powerRank = 0.3f * maxHp + 0.2f * attack + 0.3f * defence;
     }
 
     public float PowerRank
